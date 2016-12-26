@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="com.cordova.ansensors.plugin"
-        version="1.0.1">
+        version="1.0.2">
 
   <name>Cordova Android Sensors Plugin</name>
   <author>r1si</author>
@@ -12,19 +12,19 @@
 
   <asset src="www/an_sensors.js" target="js/an_sensors.js"/>
 
-  <js-module src="www/an_sensors.js" name="Android Sensors">
-    <clobbers target="Android Sensors" />
+  <js-module src="www/an_sensors.js" name="an_sensors">
+    <clobbers target="an_sensors" />
   </js-module>
 
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Android Sensors">
+      <feature name="an_sensors">
         <param name="android-package" value="com.cordova.ansensors.plugin"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/an_sensors.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/an_sensors.java" target-dir="src/com/r1si/an_sensors/"/>
   </platform>
 
 </plugin>
