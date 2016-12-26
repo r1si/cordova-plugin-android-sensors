@@ -1,0 +1,22 @@
+{
+  "name": "cordova-plugin-android-sensors",
+  "version": "1.0.0",
+  "description": "A Cordova plugin to get some Andorid functionality check",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N0ps32/cordova-plugin-root.git"
+  },
+  "keywords": [
+    "cordova",
+    "sensors",
+    "android",
+    "lock screen",
+    "is in call"
+  ],
+  "author": "r1si",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/N0ps32/cordova-plugin-root/issues"
+  },
+  "homepage": "https://github.com/N0ps32/cordova-plugin-root#readme"
+}
