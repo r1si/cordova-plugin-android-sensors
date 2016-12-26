@@ -17,11 +17,11 @@ public class an_sensors extends CordovaPlugin {
 	public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 		Context context = this.cordova.getActivity().getApplicationContext();
 		if (action.equals("isDeviceLock")){
-			callbackContext.success("lock è: " + String.valueOf(isDeviceLock(context)));
+			callbackContext.success(String.valueOf(isDeviceLock(context)));
 			return true;
 
 		}else if(action.equals("isCallActive")){
-			callbackContext.success("chiamta è: " + String.valueOf(isCallActive(context)));
+			callbackContext.success(String.valueOf(isCallActive(context)));
 			return true;
 		} else{
 			callbackContext.error("errore");
