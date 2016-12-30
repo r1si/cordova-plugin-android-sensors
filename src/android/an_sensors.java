@@ -23,7 +23,10 @@ public class an_sensors extends CordovaPlugin {
 		}else if(action.equals("isCallActive")){
 			callbackContext.success(String.valueOf(isCallActive(context)));
 			return true;
-		} else{
+		}else if(action.equals("getDeviceNetwokActivity")){
+			callbackContext.success(String.valueOf(getDeviceNetwokActivity(context)));
+			return true;
+		}else{
 			callbackContext.error("errore");
 			return false;
 		}
@@ -61,6 +64,19 @@ public class an_sensors extends CordovaPlugin {
 		}
 
 		return  isPhoneLocked; // right one
+	}
+
+	/**
+	 * Function that get the current device netwok activity
+	 * @param Context context - The context of application
+	 * @return int - [0,1,2,3,4,5,6]
+	 */
+	public static int getDeviceNetwokActivity(Context context){
+
+		return ((TelephonyManager)mContext.getSystemService(Context.TELEPHONY_SERVICE))
+				.listen(mPhoneStateListener, PhoneStateListener.LISTEN_DATA_CONNECTION_STATE
+						| PhoneStateListener.LISTEN_DATA_ACTIVITY);
+
 	}
 
 	/**
