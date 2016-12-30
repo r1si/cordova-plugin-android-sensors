@@ -72,10 +72,11 @@ public class an_sensors extends CordovaPlugin {
 	 * @return int - [0,1,2,3,4,5,6]
 	 */
 	public static int getDeviceNetwokActivity(Context context){
-
-		return ((TelephonyManager)mContext.getSystemService(Context.TELEPHONY_SERVICE))
-				.listen(mPhoneStateListener, PhoneStateListener.LISTEN_DATA_CONNECTION_STATE
-						| PhoneStateListener.LISTEN_DATA_ACTIVITY);
+//		TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+//
+//		return tm.listen(mPhoneStateListener, PhoneStateListener.LISTEN_DATA_CONNECTION_STATE
+//						| PhoneStateListener.LISTEN_DATA_ACTIVITY);
+		return 1;
 
 	}
 
