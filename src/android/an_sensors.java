@@ -20,12 +20,14 @@ public class an_sensors extends CordovaPlugin {
 		if (action.equals("isDeviceLock")){
 			callbackContext.success(String.valueOf(isDeviceLock(context)));
 			return true;
-
 		}else if(action.equals("isCallActive")){
 			callbackContext.success(String.valueOf(isCallActive(context)));
 			return true;
 		}else if(action.equals("getDeviceNetwokActivity")){
 			callbackContext.success(String.valueOf(getDeviceNetwokActivity(context)));
+			return true;
+		}else if(action.equals("getDeviceCallStatus")){
+			callbackContext.success(String.valueOf(getDeviceCallStatus(context)));
 			return true;
 		}else{
 			callbackContext.error("errore");
@@ -75,6 +77,16 @@ public class an_sensors extends CordovaPlugin {
 	public static int getDeviceNetwokActivity(Context context){
 		TelephonyManager manager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE); // TelehponyManager
 		return  manager.getDataActivity();
+	}
+
+	/**
+	 * Function that get the current in call state
+	 * @param Context context - The context of application
+	 * @return int - [0,1,2]
+	 */
+	public static int getDeviceCallStatus(Context context){
+		TelephonyManager manager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE); // TelehponyManager
+		return  manager.getCallState();
 	}
 
 	/**

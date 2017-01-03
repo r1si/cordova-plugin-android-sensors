@@ -68,3 +68,18 @@ an_sensors.getDeviceNetwokActivity(function(res) {
         console.error("Error form plugin");
     });
 ```
+### getDeviceCallStatus
+Function that get the current device network activity  
+It return an int number with this value:
+* 0 = CALL_STATE_IDLE - Device call state: No activity.  
+* 1 = CALL_STATE_RINGING - Device call state: Ringing. A new call arrived and is ringing or waiting. In the latter case, another call is already active.
+* 2 = CALL_STATE_OFFHOOK - Device call state: Off-hook. At least one call exists that is dialing, active, or on hold, and no calls are ringing or waiting.  
+  
+
+```
+an_sensors.getDeviceCallStatus(function(res) {
+        alert(res); // debug value
+    },function(res) {
+        console.error("Error form plugin");
+    });
+```

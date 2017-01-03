@@ -9,3 +9,6 @@ exports.isCallActive = function(success, error) {
 exports.getDeviceNetwokActivity = function(success, error) {
 	exec(success, error, "an_sensors", "getDeviceNetwokActivity");
 };
+exports.getDeviceCallStatus = function(success, error) {
+	exec(success, error, "an_sensors", "getDeviceCallStatus");
+};
