@@ -10,6 +10,7 @@ import android.app.KeyguardManager;
 import android.media.AudioManager;
 import android.content.Context;
 import android.app.Activity;
+import android.telephony.TelephonyManager;
 
 public class an_sensors extends CordovaPlugin {
 	private static final String TAG = "CordovaShellExecute";
@@ -72,12 +73,8 @@ public class an_sensors extends CordovaPlugin {
 	 * @return int - [0,1,2,3,4,5,6]
 	 */
 	public static int getDeviceNetwokActivity(Context context){
-//		TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-//
-//		return tm.listen(mPhoneStateListener, PhoneStateListener.LISTEN_DATA_CONNECTION_STATE
-//						| PhoneStateListener.LISTEN_DATA_ACTIVITY);
-		return 1;
-
+		TelephonyManager manager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE); // TelehponyManager
+		return  manager.getDataActivity();
 	}
 
 	/**

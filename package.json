@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-android-sensors",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Cordova plugin to get some Andorid functionality check",
   "repository": {
     "type": "git",

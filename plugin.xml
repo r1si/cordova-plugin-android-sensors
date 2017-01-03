@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="cordova-plugin-android-sensors"
-        version="1.0.6">
+        version="1.0.7">
 
   <name>Cordova Android Sensors Plugin</name>
   <author>r1si</author>
